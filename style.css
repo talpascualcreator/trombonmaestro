@@ -1,0 +1,260 @@
+/* Estilos generales que aplicarán a todas las pantallas */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fondo fijo */
+}
+
+/* Estilos del encabezado */
+header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+h1.titulo-principal {
+    color: #fff;
+    font-size: 48px; /* Tamaño de fuente más grande */
+}
+
+/* Estilos de la barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilos del mensaje principal */
+.main {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea los elementos al final del contenedor */
+    align-items: center; /* Centra horizontalmente los elementos */
+    min-height: 100vh; /* Establece una altura mínima igual a la altura de la ventana */
+}
+
+h2 {
+    color: #353333;
+    font-size: 28px;
+    margin-bottom: 20px; /* Espaciado entre h2 y p */
+}
+
+p#reseña {
+    color: #797777;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px; /* Espaciado entre p y otros elementos */
+}
+
+
+
+p#copy {
+    font-size: 16px;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 0; /* Lo coloca en la parte inferior */
+    left: 50%; /* Centra horizontalmente en el centro */
+    transform: translateX(-50%); /* Ajusta para centrar horizontalmente */
+}
+
+.page1 {
+    background-image: url('imagenes/primeraimagen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.page2 {
+    background-image: url('imagenes/pagina1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+
+
+
+/* Estilos de los botones */
+.button-container {
+    position:inherit;
+    top: 10px; /* Colocar en la parte superior */
+    right: 20px; 
+    
+    text-align: right; /* Alineación del texto a la derecha */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #837f7b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #FF6347; /* Cambia el color al pasar el ratón */
+}
+
+/* Media queries para tamaños de pantalla específicos */
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 767px) {
+    h1.titulo-principal {
+        font-size: 22px; /* Tamaño de fuente más pequeño para móviles */
+    }
+    p {
+        font-size: 10px; /* Tamaño de fuente más pequeño para móviles */
+    }
+    
+    /* Puedes ajustar otros estilos específicos para móviles aquí */
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media only screen and (min-width: 400px) and (max-width: 991px) {
+    h1.titulo-principal {
+        font-size: 22px; /* Tamaño de fuente para tabletas */
+    }
+    p {
+        font-size: 14px; /* Tamaño de fuente para tabletas */
+    }
+    /* Puedes ajustar otros estilos específicos para tabletas aquí */
+}
+
+/* Estilos para pantallas grandes (computadoras de escritorio) */
+@media only screen and (min-width: 992px) {
+    /* Puedes ajustar estilos específicos para pantallas grandes aquí */
+}
+.page2 {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.form-container {
+    background-color: #3498db, #65aee6;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #f7f3f3;
+    font-size: 28px;
+}
+
+/* Estilos para etiquetas y campos de entrada */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #080808;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+input[type="file"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Efecto de hover para campos de entrada */
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover,
+input[type="file"]:hover,
+input[type="password"]:hover {
+    border-color: #ff9800;
+    background-color: #fff8d6;
+}
+
+/* Estilos para el botón de enviar */
+input[type="submit"] {
+    background-color: #5d8097;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff5722;
+    transform: scale(1.05);
+}
+
+/* Estilo para el fondo del formulario */
+.form-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -1;
+}
+#loginForm {
+    background-color: #3498db, #65aee6;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    padding: 50px;
+}

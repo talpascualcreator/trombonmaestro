@@ -1,0 +1,38 @@
+[
+    {
+        "image": "imagenes/notasibemol.png",
+        "name": "notasibemol"
+    },
+    {
+        "image": "imagenes/notado.png",
+        "name": "notado"
+    },
+    {
+        "image": "imagenes/notare.png",
+        "name": "notare"
+    },
+    {
+        "image": "imagenes/notamibemol.png",
+        "name": "notamibemol"
+    },
+    {
+        "image": "imagenes/notafa.png",
+        "name": "notafa"
+    },
+    {
+        "image": "imagenes/notasol.png",
+        "name": "notasol"
+    },
+    {
+        "image": "imagenes/notala.png",
+        "name": "notala"
+    },
+    {
+        "image": "imagenes/notasibemolalto.png",
+        "name": "notasibemolalto"
+    },
+    {
+        "image": "imagenes/fa.png",
+        "name": "fa"
+    }
+]

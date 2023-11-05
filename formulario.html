@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="imagenes/iconotrombonmaestro.ico" type="image/x-icon" />
+    <title>Formulario Trombón Maestro</title>
+  </head>
+  
+  <body class="page2">
+    <div class="container">
+      <div class="form-container">
+        <h1>Formulario Trombón Maestro</h1>
+        <form action="registrar.php" method="post" enctype="multipart/form-data">
+          <label for="nombre">Nombre :</label>
+          <input type="text" id="nombre" name="nombre" required /><br /><br />
+
+          <label for="colegio">Colegio:</label>
+          <input type="text" id="colegio" name="colegio" required /><br /><br />
+
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" name="edad" required /><br /><br />
+
+          <label for="sexo">Sexo:</label>
+          <select id="sexo" name="sexo" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option></select
+          ><br /><br />
+
+          <label for="contrasena">Contraseña:</label>
+          <input
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            required
+          /><br /><br />
+
+          <input type="submit" value="Enviar" />
+        </form>
+        <div>
+           
+        </div>
+      </div>
+    </div>
+    <script src="js.js"></script>
+  </body>
+</html>

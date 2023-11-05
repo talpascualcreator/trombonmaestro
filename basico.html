@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <!-- Enlaza el archivo CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="icon"
+      href="imagenes/iconotrombonmaestro.ico"
+      type="image/x-icon"
+    />
+    <title>TrombónMaestro</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo-principal">TrombónMaestro</h1>
+      <nav>
+        <ul>
+          <li><a href="indexp1.html" class="current">Inicio</a></li>
+          <li><a href="indexp1.html" class="current">Sobre Nosotros</a></li>
+          <li><a href="indexp1.html" class="current">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <!-- juego memoria-->
+        <section id="juego-memoria">
+          <h1>Memory Cards Escala Sibemol</h1>
+          <div class="grid-container"></div>
+          <p>Score: <span class="score"></span></p>
+          <div class="actions">
+            <button onclick="MemoryGameModule.restart()">Restart</button>
+          </div>
+        </section>
+
+        <!-- juego ¿Cual figura, es la clave de fa?-->
+        <section id="juegos">
+          <h1>¿Cual figura, es la clave de fa?</h1>
+
+          <img id="imagen" src="imagenes/fa.png" alt="Imagen 1" />
+
+          <div>
+            <button id="anterior">Anterior</button>
+            <button id="siguiente">Siguiente</button>
+          </div>
+
+          <input
+            type="text"
+            id="respuesta"
+            placeholder="numero figura correcta"
+          />
+          <button id="comprobar">Comprobar</button>
+          <p id="mensaje"></p>
+        </section>
+
+        <!-- juego Escala si bemol-->
+        <section id="juego-memoria">
+          <h1>Escala si bemol</h1>
+          <div class="tablero">
+            <!-- Aquí irán las cartas del juego -->
+            <div class="carta" data-valor="1">
+              <img src="imagenes/notasibemol.png" alt="sib" />
+            </div>
+            <div class="carta" data-valor="1">
+              <img src="imagenes/notado.png" alt="do" />
+            </div>
+            <div class="carta" data-valor="2">
+              <img src="imagenes/notare.png" alt="re" />
+            </div>
+            <div class="carta" data-valor="2">
+              <img src="imagenes/notamibemol.png" alt="mib" />
+            </div>
+            <div class="carta" data-valor="3">
+              <img src="imagenes/notafa.png" alt="fa" />
+            </div>
+            <div class="carta" data-valor="3">
+              <img src="imagenes/notasol.png" alt="sol" />
+            </div>
+            <div class="carta" data-valor="4">
+              <img src="imagenes/notala.png" alt="la" />
+            </div>
+            <div class="carta" data-valor="4">
+              <img src="imagenes/notasibemolalto.png" alt="sib" />
+            </div>
+            <div id="mensaje-victoria">¡Has ganado!</div>
+          </div>
+        </section>
+      
+         <!-- Conecta las notas con su nombre! -->
+        <section id="juego-notas">
+          <h2>¡Conecta las notas con su nombre!</h2>
+          <h1>Arrastra la imagen al nombre que creas correcto</h1>
+          <div class="contenedor-notas">
+            <div class="nota" draggable="true" id="redonda">
+              <div class="imagen">
+                <img src="imagenes/redonda.png" alt="Redonda" />
+              </div>
+              <div class="nombre">
+                <p>Redonda Valor = 4 Tiempos</p>
+              </div>
+            </div>
+            <div class="nota" draggable="true" id="blanca">
+              <div class="imagen">
+                <img src="imagenes/blanca.png" alt="Blanca" />
+              </div>
+              <div class="nombre">
+                <p>Blanca Valor = 2 Tiempos</p>
+              </div>
+            </div>
+            <div class="nota" draggable="true" id="negra">
+              <div class="imagen">
+                <img src="imagenes/negra.png" alt="Negra" />
+              </div>
+              <div class="nombre">
+                <p>Negra Valor = 1 Tiempo</p>
+              </div>
+            </div>
+            <div class="nota" draggable="true" id="corchea">
+              <div class="imagen">
+                <img src="imagenes/corchea.png" alt="Corchea" />
+              </div>
+              <div class="nombre">
+                <p>Corchea Valor = 1/2 Tiempo</p>
+              </div>
+            </div>
+          </div>
+          <p id="mensaje-felicitacion"></p>
+        </section>
+        <!-- Juego de Reconocimiento de posiciones de Notas-->
+        <section id="juego-posiciones">
+          <h1>Juego de Reconocimiento de posiciones de Notas</h1>
+          <h2>escribe en el campo la posición de la nota en el trombon</h2>
+          <!-- Nota Sib -->
+          <div class="contenedor-nota">
+            <img src="imagenes/notasibemol.png" alt="Nota Sib" />
+            <input
+              type="text"
+              id="respuesta-sib"
+              placeholder="Escribe la posición"
+            />
+            <button id="verificar-sib">Verificar</button>
+            <div id="mensaje-sib"></div>
+          </div>
+
+          <!-- Repite el mismo patrón para las otras notas -->
+
+          <!-- Nota Do -->
+          <div class="contenedor-nota">
+            <img src="imagenes/notado.png" alt="Nota Do" />
+            <input
+              type="text"
+              id="respuesta-do"
+              placeholder="Escribe la posición"
+            />
+            <button id="verificar-do">Verificar</button>
+            <div id="mensaje-do"></div>
+          </div>
+
+          <!-- Nota Re -->
+          <div class="contenedor-nota">
+            <img src="imagenes/notare.png" alt="Nota Re" />
+            <input
+              type="text"
+              id="respuesta-re"
+              placeholder="Escribe la posición"
+            />
+            <button id="verificar-re">Verificar</button>
+            <div id="mensaje-re"></div>
+          </div>
+
+          <!-- Nota Mib -->
+          <div class="contenedor-nota">
+            <img src="imagenes/notamibemol.png" alt="Nota Mib" />
+            <input
+              type="text"
+              id="respuesta-mib"
+              placeholder="Escribe la posición"
+            />
+            <button id="verificar-mib">Verificar</button>
+            <div id="mensaje-mib"></div>
+          </div>
+
+          <!-- Nota Fa -->
+          <div class="contenedor-nota">
+            <img src="imagenes/notafa.png" alt="Nota Fa" />
+            <input
+              type="text"
+              id="respuesta-fa"
+              placeholder="Escribe la posición"
+            />
+            <button id="verificar-fa">Verificar</button>
+            <div id="mensaje-fa"></div>
+          </div>
+
+          <!-- Nota Sol -->
+          <div class="contenedor-nota">
+            <img src="imagenes/notasol.png" alt="Nota Sol" />
+            <input
+              type="text"
+              id="respuesta-sol"
+              placeholder="Escribe la posición"
+            />
+            <button id="verificar-sol">Verificar</button>
+            <div id="mensaje-sol"></div>
+          </div>
+
+          <!-- Nota La -->
+          <div class="contenedor-nota">
+            <img src="imagenes/notala.png" alt="Nota La" />
+            <input
+              type="text"
+              id="respuesta-la"
+              placeholder="Escribe la posición"
+            />
+            <button id="verificar-la">Verificar</button>
+            <div id="mensaje-la"></div>
+          </div>
+
+          <!-- Nota Sibemol Alto -->
+          <div class="contenedor-nota">
+            <img src="imagenes/notasibemolalto.png" alt="Nota Sibemol Alto" />
+            <input
+              type="text"
+              id="respuesta-sibalto"
+              placeholder="Escribe la posición"
+            />
+            <button id="verificar-sibalto">Verificar</button>
+            <div id="mensaje-sibalto"></div>
+          </div>
+          
+        </section>
+           <!-- Juego de Conocimiento -->    
+           <section id="juego-conocimiento">
+            <h1>Juego de Conocimiento</h1>
+            <div class="pregunta">
+              <img src="imagenes/pentagrama.jpg" alt="Pentagrama" />
+              <h2>¿Cuál de estas tres opciones es verdadera?</h2>
+            </div>
+            <button id="opcion-boquilla" class="boton-opcion">Boquilla</button>
+            <button id="opcion-pentagrama" class="boton-opcion">
+              Pentagrama
+            </button>
+            <button id="opcion-coda" class="boton-opcion">Coda</button>
+            <div id="mensaje"></div>
+          </section>
+      </article>
+    </main>
+
+    <footer>
+      <div class="redes-sociales">
+        <a
+          href="https://www.facebook.com/batuta.meta?locale=es_LA"
+          class="fa fa-facebook"
+          alt="Facebook"
+        ></a>
+        <a
+          href="https://twitter.com/batutametaco"
+          class="fa fa-twitter"
+          alt="x"
+        ></a>
+        <a
+          href="https://www.google.com/TrombonMaestro"
+          class="fa fa-google"
+          alt="Facebook"
+        ></a>
+        <a
+          href="https://www.youtube.com/@FundacionNacionalBatuta"
+          class="fa fa-youtube"
+          alt="YouTube"
+        ></a>
+        <a
+          href="https://www.linkedin.com/TrombonMaestro"
+          class="fa fa-linkedin"
+          alt="YouTube"
+        ></a>
+      </div>
+      <p id="copy">&copy; 2023 TrombónMaestro</p>
+    </footer>
+    <script src="1.js"></script>
+  </body>
+</html>
