@@ -393,3 +393,27 @@ const MemoryGameModule = (function () {
 document.addEventListener("DOMContentLoaded", function () {
   MemoryGameModule.init();
 });
+
+// cambio automatico del afecha
+
+ // Obtener el elemento donde se mostrará el año
+ var yearSpan = document.getElementById('year');
+
+ // Obtener el año actual
+ var currentYear = new Date().getFullYear();
+
+ // Mostrar el año actual en el span
+ yearSpan.textContent = currentYear;
+
+ // Función para actualizar el año cada segundo
+ function updateYear() {
+     var newYear = new Date().getFullYear();
+     // Si el año ha cambiado, actualizarlo en el span
+     if (newYear !== currentYear) {
+         currentYear = newYear;
+         yearSpan.textContent = currentYear;
+     }
+ }
+
+ // Llamar a la función updateYear() cada segundo
+ setInterval(updateYear, 1000);

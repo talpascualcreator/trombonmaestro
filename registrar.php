@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     VALUES (?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($consulta);
-        $stmt->bind_param("ssiss", $nombre, $colegio, $edad, $sexo, $contrasena_hash);
+        $stmt->bind_param("sssss", $nombre, $colegio, $edad, $sexo, $contrasena_hash);
 
         if ($stmt->execute()) {
             echo "<script>alert('Los datos se han insertado correctamente en la base de datos.');</script>";
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 // Cerrar la conexión a la base de datos
 $conn->close();
-?>
+
 
 
 

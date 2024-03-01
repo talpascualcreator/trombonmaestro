@@ -78,6 +78,22 @@ p#copy {
     transform: translateX(-50%); /* Ajusta para centrar horizontalmente */
 }
 
+#copy {
+    font-size: 14px;
+    color: #555; /* Color de texto gris oscuro */
+    margin-top: 20px; /* Añade espacio superior */
+}
+
+@keyframes changeYear {
+    0% { color: #555; } /* Color de texto gris oscuro */
+    50% { color: #ff0000; } /* Cambia el color a rojo */
+    100% { color: #555; } /* Vuelve al color original */
+}
+
+#year {
+    animation: changeYear 2s infinite; /* Aplica la animación */
+}
+
 .page1 {
     background-image: url('imagenes/primeraimagen.jpg');
     background-size: cover;

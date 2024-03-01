@@ -15,4 +15,4 @@ if ($conn->connect_error) {
     echo "Conexión exitosa"; //  mensaje de éxito 
 }
 header("refresh:.10;url=iniciosesion.html");
-?>
+
