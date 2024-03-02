@@ -905,6 +905,13 @@ video {
        (max-width: 1280px) and (max-height:800px)
  {
 
+      /*memoria*/
+
+.grid-container {
+    grid-template-columns: repeat(2, 140px); /* Dos columnas */
+}
+
+
     .titulo-principal {
         font-size: 30px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
         margin-top: 40px; /* Desplazamiento hacia abajo reducido */
@@ -928,11 +935,6 @@ video {
     justify-content:first baseline; /* Al hacer clic en el menú hamburguesa, los elementos se desplazan a la izquierda */
   }
 
-  /*memoria*/
-
-.grid-container {
-    grid-template-columns: repeat(2, 140px); /* Dos columnas */
-}
 
   .brand-name img {
     position: absolute;
@@ -1078,6 +1080,9 @@ section.dinamica {
     margin: 10px;
     padding: 10px;
 }
+
+
+
  }
 
 
