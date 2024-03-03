@@ -6,7 +6,7 @@ body {
     background-image: url('imagenes/fondo.jpg');
     background-size: cover;
     background-attachment: fixed;
-    background-color: gold;
+   
     color: #fff;
     text-align: center;
 }
@@ -32,7 +32,7 @@ h1 {
 }
 
 h1:hover {
-    color: gold; /* Cambiar a color dorado al pasar el mouse */
+    color: rgb(223, 193, 24); /* Cambiar a color dorado al pasar el mouse */
 }
 
 /* Estilos del título principal */
@@ -114,13 +114,21 @@ main {
 main h2 {
     font-size: 28px;
     margin: 20px 0;
-    color: gold;
+    color: rgb(47, 0, 255);
 }
+
+main b {
+    font-size: 18px;
+    line-height: 1.5;
+    color:rgb(3, 36, 70);
+    text-align: justify;
+}
+
 
 main p {
     font-size: 18px;
     line-height: 1.5;
-    color: #000;
+    color:rgb(32, 31, 32);
     text-align: justify;
 }
 
@@ -141,7 +149,7 @@ main p {
 .about-us h3 {
     font-size: 30px; /* Tamaño de fuente para los subtítulos */
     margin-top: 20px; /* Espacio superior */
-    color: gold;
+    color:rgb(47, 0, 255);
 }
 
 .about-us p {
@@ -500,7 +508,7 @@ footer {
 }
 
 .subtitle{
-    color: gold;
+    color: rgb(47, 0, 255);
 }
 
 /* Estilos para el contenido dentro del main */
